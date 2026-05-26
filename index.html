@@ -1,1 +1,55 @@
-<p>Hello</p>p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my weird web corner</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <div class="desktop">
+
+    <div class="icon" onclick="openWindow('photos-window')">
+      <img src="assets/images/folder.png">
+      <p>photos/</p>
+    </div>
+
+    <div class="icon" onclick="openWindow('music-window')">
+      <img src="assets/images/music.png">
+      <p>songs.mp3</p>
+    </div>
+
+  </div>
+
+  <div class="window hidden" id="photos-window">
+    <div class="title-bar">
+      <span>photos/</span>
+      <button onclick="closeWindow('photos-window')">x</button>
+    </div>
+
+    <div class="window-content">
+      <img class="photo" src="assets/images/photo1.jpg">
+      <p class="caption">you looked happy here</p>
+    </div>
+  </div>
+
+  <div class="window hidden" id="music-window">
+    <div class="title-bar">
+      <span>songs.mp3</span>
+      <button onclick="closeWindow('music-window')">x</button>
+    </div>
+
+    <div class="window-content">
+      <audio controls>
+        <source src="assets/audio/song.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
